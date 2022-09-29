@@ -1,0 +1,22 @@
+
+{% extends 'base/base.html' %}
+{% load static %}
+{% block title %}
+{%if categoria %}{{ categoria.categoria_nombre}}{% else %}Productos{% endif %}
+{% endblock %}
+{% block content %}
+<div class="row">
+    {% for producto in productos %}
+    <div class="col-md-3">
+        <div class="card card-product-grid">
+            <a href="{{ producto.get_url }}" class="img-wrap"> <img src="{{ producto.imagen.url }}"> </a>
+            <figcaption class="info-wrap">
+                <a href="{{ producto.get_url }}"class="title">{{ producto.producto_nombre }}</a><br>
+                <div class="price mt-1"><p>${{producto.precio}}</p></div> <!-- price-wrap.// -->
+            </figcaption>
+        </div>
+    </div> <!-- col.// -->
+    {% endfor %}
+    
+</div> <!-- row.// -->
+{% endblock %}
