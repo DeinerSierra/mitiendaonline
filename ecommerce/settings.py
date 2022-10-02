@@ -77,6 +77,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "ecommerce.wsgi.application"
+#Para que django reconozca mi clase Cuenta
+AUTH_USER_MODEL = 'usuarios.Cuenta'
 
 
 # Database

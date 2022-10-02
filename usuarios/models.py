@@ -16,7 +16,8 @@ class Superusuario(BaseUserManager):
             last_name = last_name,
         )
         usuario.set_password(password)
-        usuario.save(using = self._db)
+        usuario.save(using=self._db)
+        print('Usuario guardado')
         return usuario
     
     def create_superuser(self, first_name, last_name, username, email, password):
