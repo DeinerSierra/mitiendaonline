@@ -102,7 +102,7 @@ $(document).ready(function() {
 			<a href="{% url 'tienda:tienda' %}" class="btn btn-outline-primary mr-5">Tienda</a>
 			<div class="col-lg  col-md-6 col-sm-12 col">
 
-				<form action="{% url 'buscar_producto'}" class="search">
+				<form action="{% url 'tienda:buscar_producto'}" class="search">
 					<div class="input-group w-100">
 						<input type="text" class="form-control" style="width:60%;" placeholder="Buscar Productos" name="keyword">
 						
@@ -128,7 +128,7 @@ $(document).ready(function() {
 							{% else %}
 							<div class="widget-header">
 								<div> 
-									<a href="#" class="btn btn-info text-white">Dashboard</a> <span class="dark-transp"> | </span>
+									<a href="#" class="btn btn-info text-white"><!--Dashboard--></a> <span class="dark-transp"> | </span>
 									<a href="{% url 'usuarios:logout' %}" class="btn btn-info text-white"> Salir</a>
 								</div>
 							</div>
